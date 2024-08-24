@@ -50,19 +50,19 @@ this can make the development process slower, depending on the project, there ma
 2. Create a GitHub Repository: Set up a new repository on GitHub.
 3. Clone the Repository: Clone the repository to your local machine.
 
-   ``git clone https://github.com/your-username/repository-name.git``
+``git clone https://github.com/your-username/repository-name.git``
 4. Create/Modify Files: Add new files or modify existing ones.
 
-   ``touch README.md``
+``touch README.md``
 5. Stage Changes: Stage the files you want to commit.
 
-   ``git add README.md``
+``git add README.md``
 6. Commit the Changes: Make the commit with a descriptive message.
 
-   ``git commit -m "Initial commit - Added README.md"``
+``git commit -m "Initial commit - Added README.md"``
 7. Push to GitHub: Push the commit to the remote repository.
 
-   ``git push origin main``
+``git push origin main``
 8. Verify on GitHub: Check the repository to ensure the commit is visible.
 
 
@@ -73,56 +73,99 @@ this can make the development process slower, depending on the project, there ma
 **Typical Branching Workflow**
 1. Creating a Branch: A new branch is created from the main branch or another stable branch.
 
-      ``git branch feature-branch``
+``git branch feature-branch``
 2. Switch to the New Branch: After creating the branch, switch to it using. 
 
-      ``git checkout feature-branch``
+``git checkout feature-branch``
    
 Alternatively, one can create and switch to the new branch in one command:
 
-      ``git checkout -b feature-branch``
+``git checkout -b feature-branch``
 3. Working on the Branch
 Make Changes: Work on the new feature, bug fixes, or other tasks in the new branch.
 Commit Changes: After making changes, stage and commit them:
 
-      ``git add .``
-      ``git commit -m "Implemented feature X"``
+``git add .``
+``git commit -m "Implemented feature X"``
    
 5. Pushing the Branch to GitHub: To share the branch with others or back it up to GitHub, push it to the remote repository.
 
-      ``git push origin feature-branch``
+``git push origin feature-branch``
 
 6. Merging the Branch: Before merging, the working branch must be up to date with the main branch. Switch to the target branch (e.g., main) and pull the latest changes.
 
-      ``git checkout main``
-      ``git pull origin main``
+``git checkout main``
+``git pull origin main``
    
       Merge your branch into the target branch:
 
-      ``git merge feature-branch``
+``git merge feature-branch``
 If there are no conflicts, Git will merge the changes automatically. If there are conflicts, Git will prompt you to resolve them manually.
 After a successful merge, push the updated main branch back to GitHub:
 
-   ``git push origin main``
+``git push origin main``
 
 
 7. Deleting the Branch (Optional)
 
 Once the branch is merged and no longer needed, it can delete it locally:
 
-      ``git branch -d feature-branch``
+``git branch -d feature-branch``
       
 To delete the branch from GitHub:
 
-      ``git push origin --delete feature-branch``
+``git push origin --delete feature-branch``
 
       
 ## Explore the role of pull requests in the GitHub workflow. How do they facilitate code review and collaboration, and what are the typical steps involved in creating and merging a pull request?
 
 Pull requests facilitate code review because other members can review the proposed changes, comment on code, suggest improvements, and 
 discuss potential issues. Teams often require one or more approvals before a PR can be merged. Pull requests provide a platform for discussing changes
-in detail, contributors can discuss the reason behind certain decisions. This calls for the need for continuous integration, allowing automated tests on 
-code to ensure that they don't break existing functionality before the code is merged into the project. This
+in detail there by facilitating collaboration, contributors can discuss the reason behind certain decisions. This calls for the need for continuous integration, allowing automated code tests to ensure that they don't break existing functionality before the code is merged into the project.
+
+**Steps involved in creating and merging pull requests**
+
+1. Create a New Branch
+It is important to create a new branch when making a Pull request.
+
+``git checkout -b feature-branch``
+Make changes on this branch and commit them.
+
+2. Push the Branch to GitHub
+Push the local branch to the remote repository on GitHub.
+
+``git push origin feature-branch``
+5. Create a Pull Request
+Navigate to your repository on GitHub. You’ll see a prompt to create a pull request for your recently pushed branch. Alternatively, go to the "Pull requests" tab and click "New pull request."
+Select Branches:
+Choose the base branch (the branch you want to merge into, usually main) and compare it with your feature branch. GitHub will show a visual diff of the changes.
+Add a Title and Description:
+Give your pull request a descriptive title that summarizes the purpose of the changes. In the description, provide more detailed information about what was done, why it was done, and any other relevant context.
+Request Reviewers:
+You can request specific team members to review your pull request by mentioning them or assigning them as reviewers. This action notifies them to start the review process.
+Add Labels and Projects (Optional):
+You can add labels, assign the PR to a project, or link it to an existing issue. These actions help organize and track the PR within the broader project management context.
+5. Review the Pull Request
+Review Process:
+Reviewers will examine the code changes, leave comments, and possibly request changes. This step is crucial for ensuring that the code meets project standards and doesn’t introduce any issues.
+Respond to Feedback:
+The author of the PR can respond to feedback, make additional commits to the branch to address comments, and push those changes to GitHub. The PR will automatically update with the new changes.
+6. Approve and Merge the Pull Request
+Approval:
+Once the reviewers are satisfied, they will approve the PR. Depending on the repository’s settings, the PR may require one or multiple approvals before it can be merged.
+Merging the PR:
+After approval, the PR can be merged. There are several ways to merge:
+Merge Commit: The default method that creates a merge commit in the base branch, preserving the history of both branches.
+Squash and Merge: Combines all commits from the PR into a single commit in the base branch, providing a cleaner history.
+Rebase and Merge: Replays the commits from the feature branch onto the base branch, creating a linear history without a merge commit.
+After selecting the appropriate merge method, click the "Merge pull request" button.
+7. Clean Up
+Delete the Branch:
+After the PR is merged, you can delete the feature branch, both locally and on GitHub, to keep the repository clean:
+bash
+Copy code
+git branch -d feature-branch
+git push origin --delete feature-branch
 
 ## Discuss the concept of "forking" a repository on GitHub. How does forking differ from cloning, and what are some scenarios where forking would be particularly useful?
 
