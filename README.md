@@ -41,9 +41,9 @@ others how to run the program. A well-written README should include an introduct
 this can make the development process slower, depending on the project, there may be a need for highly experienced team members.
 
 ## Detail the steps involved in making your first commit to a GitHub repository. What are commits, and how do they help in tracking changes and managing different versions of your project?
-**What are Comments?**: They are snapshots of the project at a specific point in time, When commits are made on GitHub or Git, these tools will save the current state of the files in the project as a hash in the project file history.
+*What are Commits?*: They are snapshots of the project at a specific point in time, When commits are made on GitHub or Git, these tools will save the current state of the files in the project as a hash in the project file history.
 
-**How do they help in tracking projects**: By storing the current state of the project(file) as a hash string in the project file history, different states of the file system can be viewed by switching between these states, this is how commits help in tracking and managing projects.
+*How do they help in tracking projects?*: By storing the current state of the project(file) as a hash string in the project file history, different states of the file system can be viewed by switching between these states, this is how commits help in tracking and managing projects.
 
 **Steps to Create a Commit**:
 1. Set Up Git: Install and configure Git on your system.
