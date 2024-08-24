@@ -3,30 +3,30 @@
 Version control is the process of keeping track of the changes made to a repository(or directory) over time, each change made to a code file can be viewed as a version of that code file, so a version control tool keeps track of these changes by mapping a string of letters called 'hash' to each version of the code. These hashes of changes made are stored in a ledger. This maintains the integrity of a code base(project) because all developers working on the project can view the history of changes made to the project to monitor for abnormal or unauthorized changes. GitHub is a popular tool among developers because they use it to work together on a single project with the benefit of version control.
 
 ## Describe the process of setting up a new repository on GitHub. What are the key steps involved, and what are some of the important decisions you need to make during this process?
-1. **Create a GitHub Account (if needed)**
-2. **Sign Up**: If you don't already have a GitHub account, go to github.com and sign up.
-3. **Verify Email**: Confirm your email address to activate your account fully.
+1. *Create Account*: Create a GitHub Account (if needed)
+2. *Sign Up*: If you don't already have a GitHub account, go to github.com and sign up.
+3. *Verify Email*: Confirm your email address to activate your account fully.
 
-4. **Sign In** and Access the Repository Creation Page
+4. *Sign In*: Sign In and Access the Repository Creation Page
    
-5. **New Repository**: Click on the "+" icon at the top right corner of the GitHub homepage and select "New repository" from the dropdown menu.
+5. *New Repository*: Click on the "+" icon at the top right corner of the GitHub homepage and select "New repository" from the dropdown menu.
 
-6. **Repository Name**: Choose a name for your repository. This should be descriptive of the project. For example, if working on a personal blog, one might name it "my-blog".
+6. *Repository Name*: Choose a name for your repository. This should be descriptive of the project. For example, if working on a personal blog, one might name it "my-blog".
  
-7. **Description (Optional)**: Provide a brief description of what the repository will contain. This helps others (and your future self) understand the purpose of the repository.
+7. *Description (Optional)*: Provide a brief description of what the repository will contain. This helps others (and your future self) understand the purpose of the repository.
 
-8. **Choose Repository Visibility**
+8. *Choose Repository Visibility*
 Public: The repository will be visible to everyone. This is ideal for open-source projects where you want others to view, use, or contribute to your code.
 Private: Only you and the collaborators you invite can see this repository. This is suitable for private projects, early-stage development, or anything you want to keep confidential.
-9. **Initialize the Repository (This is optional but recommended)**: This process creates the repository on Github, it is similar to creating a directory on a desktop.
+9. *Initialize the Repository (This is optional but recommended)*: This process creates the repository on Github, it is similar to creating a directory on a desktop.
 
-10. **Initialize with a README**: A README file is the first file visitors will see. It’s a good place to introduce your project, explain what it does, and provide any instructions. Initializing the repository with a README is recommended, as it saves you an extra step later.
+10. *Initialize with a README*: A README file is the first file visitors will see. It’s a good place to introduce your project, explain what it does, and provide any instructions. Initializing the repository with a README is recommended, as it saves you an extra step later.
 
-11. **Add .gitignore**: A .gitignore file specifies which files or directories Git should ignore. GitHub provides templates for different programming languages and environments. Choosing an appropriate template ensures that unnecessary files (e.g., logs, compiled code, environment variables) aren't tracked in the repository.
+11. *Add .gitignore*: A .gitignore file specifies which files or directories Git should ignore. GitHub provides templates for different programming languages and environments. Choosing an appropriate template ensures that unnecessary files (e.g., logs, compiled code, environment variables) aren't tracked in the repository.
  
-12. **Choose a License**: A license defines how others can use the code. GitHub offers various license templates (like MIT, Apache 2.0, GPL, etc.). If creating an open-source project, selecting a license upfront is important to ensure others know their rights regarding the code. If unsure, the MIT License is a permissive and popular choice.
+12. *Choose a License*: A license defines how others can use the code. GitHub offers various license templates (like MIT, Apache 2.0, GPL, etc.). If creating an open-source project, selecting a license upfront is important to ensure others know their rights regarding the code. If unsure, the MIT License is a permissive and popular choice.
 
-13. **Create the Repository**
+13. *Create the Repository*
 Click "Create Repository": Once the necessary details have been filled in, click the "Create repository" button. The new repository will be created.
 
 ## Discuss the importance of the README file in a GitHub repository. What should be included in a well-written README, and how does it contribute to effective collaboration?
@@ -247,4 +247,4 @@ Forking is useful in the following scenario:
 
 5. *Regularly Sync with the Upstream Repository*: If you’re working on a fork of a project, regularly sync your fork with the upstream repository to stay up-to-date with the latest changes. Periodically pull changes from the original repository (upstream) and merge them into your fork to avoid falling behind or encountering conflicts later.
 
-6. *Document the Workflow and Guidelines*: Create and maintain clear documentation for your project’s workflow, including how to set up the project, contributing guidelines, coding standards, and how to handle common Git tasks. Include a CONTRIBUTING.md file in your repository that outlines how to submit issues, create branches, write commit messages, and submit PRs.
+6. *Document the Workflow and Guidelines*: Create and maintain clear documentation for your project’s workflow, including how to set up the project, contributing guidelines, coding standards, and how to handle common Git tasks. Include a `CONTRIBUTING.md` file in your repository that outlines how to submit issues, create branches, write commit messages, and submit PRs.
